@@ -1,9 +1,11 @@
 import { useMemo, useState } from "react";
 import "./App.css";
 import { driverStandings, standingsMeta } from "./data/driverStandings.js";
+import { racePodiums, racePodiumsMeta } from "./data/racePodiums.js";
 import { AppHeader } from "./components/AppHeader.jsx";
 import { FilterBar } from "./components/FilterBar.jsx";
 import { Podium } from "./components/Podium.jsx";
+import { RacePodiums } from "./components/RacePodiums.jsx";
 import { StandingsTable } from "./components/StandingsTable.jsx";
 import { SummaryCards } from "./components/SummaryCards.jsx";
 
@@ -35,6 +37,7 @@ function App() {
       <section className="dashboard" aria-label="F1 2026 车手积分榜">
         <SummaryCards drivers={driverStandings} />
         <Podium drivers={driverStandings.slice(0, 3)} />
+        <RacePodiums meta={racePodiumsMeta} races={racePodiums} />
         <FilterBar
           count={visibleDrivers.length}
           onTeamChange={setSelectedTeam}
