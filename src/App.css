@@ -48,6 +48,83 @@
   line-height: 0.95;
 }
 
+.hero__title-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.radio-clip {
+  flex: 0 0 auto;
+}
+
+.radio-clip__button {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 58px;
+  padding: 9px 14px 9px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 8px;
+  background: linear-gradient(135deg, rgba(225, 6, 0, 0.98), rgba(23, 26, 31, 0.98));
+  color: #ffffff;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.28);
+  cursor: pointer;
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease,
+    border-color 160ms ease;
+}
+
+.radio-clip__button:hover {
+  border-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.34);
+  transform: translateY(-2px);
+}
+
+.radio-clip__button:active {
+  transform: translateY(0);
+}
+
+.radio-clip__button:focus-visible {
+  outline: 3px solid rgba(255, 209, 102, 0.9);
+  outline-offset: 3px;
+}
+
+.radio-clip__mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 36px;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #e10600;
+  font-size: 1rem;
+  font-weight: 900;
+  letter-spacing: 0;
+}
+
+.radio-clip__text {
+  display: grid;
+  gap: 2px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.radio-clip__text span {
+  color: #ffd166;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.radio-clip__text strong {
+  font-size: 0.95rem;
+  line-height: 1.1;
+}
+
 .hero__subtitle {
   max-width: 540px;
   margin: 18px 0 0;
@@ -411,6 +488,15 @@ tbody tr:last-child td {
 
   .hero__content {
     padding-top: 56px;
+  }
+
+  .hero__title-row {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .radio-clip__button {
+    min-height: 54px;
   }
 
   .hero__facts,
