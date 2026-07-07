@@ -1,4 +1,5 @@
 import heroImage from "../assets/race-hero.png";
+import { RadioClipButton } from "./RadioClipButton.jsx";
 
 export function AppHeader({ leader, meta, totalDrivers }) {
   return (
@@ -8,10 +9,13 @@ export function AppHeader({ leader, meta, totalDrivers }) {
 
       <div className="hero__content">
         <h2 className="eyebrow">Formula 1 {meta.season}</h2>
-        <h1>车手积分榜</h1>
+        <div className="hero__title-row">
+          <h1>车手积分榜</h1>
+          <RadioClipButton />
+        </div>
         <p className="hero__subtitle">
           截止 {meta.afterRound} 后，共 {totalDrivers} 位车手进入榜单。
-        </p>
+        </p> 
 
         <div className="hero__facts" aria-label="榜单摘要">
           <div>
