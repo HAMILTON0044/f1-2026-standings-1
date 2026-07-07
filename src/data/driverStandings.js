@@ -17,7 +17,7 @@ export const teamColors = {
   Haas: "#7a7979",
   Williams: "#00b9ff",
   Audi: "#780000",
-  "Aston Martin": "#006f62",
+  "Aston Martin": "#1f6548",
   Cadillac: "#111111",
 };
 
