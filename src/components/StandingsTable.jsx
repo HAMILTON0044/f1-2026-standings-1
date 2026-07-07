@@ -12,6 +12,7 @@ export function StandingsTable({ drivers, leaderPoints }) {
               <th>车队</th>
               <th>积分</th>
               <th>距榜首</th>
+
             </tr>
           </thead>
           <tbody>

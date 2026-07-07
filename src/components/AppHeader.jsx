@@ -7,7 +7,7 @@ export function AppHeader({ leader, meta, totalDrivers }) {
       <div className="hero__overlay" />
 
       <div className="hero__content">
-        <p className="eyebrow">Formula 1 {meta.season}</p>
+        <h2 className="eyebrow">Formula 1 {meta.season}</h2>
         <h1>车手积分榜</h1>
         <p className="hero__subtitle">
           截止 {meta.afterRound} 后，共 {totalDrivers} 位车手进入榜单。
@@ -21,6 +21,7 @@ export function AppHeader({ leader, meta, totalDrivers }) {
           <div>
             <span>领跑积分</span>
             <strong>{leader.points}</strong>
+
           </div>
           <div>
             <span>更新时间</span>
