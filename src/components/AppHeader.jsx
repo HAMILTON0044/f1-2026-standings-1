@@ -1,7 +1,8 @@
 import heroImage from "../assets/race-hero.png";
 import { RadioClipButton } from "./RadioClipButton.jsx";
+import { ThemeToggle } from "./ThemeToggle.jsx";
 
-export function AppHeader({ leader, meta, totalDrivers }) {
+export function AppHeader({ leader, meta, onThemeToggle, theme, totalDrivers }) {
   return (
     <header className="hero">
       <img className="hero__image" src={heroImage} alt="夜间赛道上的开放轮赛车" />
@@ -11,7 +12,10 @@ export function AppHeader({ leader, meta, totalDrivers }) {
         <h2 className="eyebrow">Formula 1 {meta.season}</h2>
         <div className="hero__title-row">
           <h1>车手积分榜</h1>
-          <RadioClipButton />
+          <div className="hero__actions">
+            <ThemeToggle theme={theme} onToggle={onThemeToggle} />
+            <RadioClipButton />
+          </div>
         </div>
         <p className="hero__subtitle">
           截止 {meta.afterRound} 后，共 {totalDrivers} 位车手进入榜单。
