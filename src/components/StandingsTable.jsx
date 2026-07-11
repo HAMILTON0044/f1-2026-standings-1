@@ -5,13 +5,14 @@ export function StandingsTable({ drivers, leaderPoints }) {
     <section className="table-panel" aria-label="完整积分表">
       <div className="table-scroll">
         <table>
+          <caption className="sr-only">2026 赛季车手积分排名</caption>
           <thead>
             <tr>
-              <th>排名</th>
-              <th>车手</th>
-              <th>车队</th>
-              <th>积分</th>
-              <th>距榜首</th>
+              <th scope="col">排名</th>
+              <th scope="col">车手</th>
+              <th scope="col">车队</th>
+              <th scope="col">积分</th>
+              <th scope="col">距榜首</th>
 
             </tr>
           </thead>

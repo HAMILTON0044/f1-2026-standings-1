@@ -7,11 +7,11 @@ export function SummaryCards({ drivers }) {
   return (
     <section className="summary-grid" aria-label="赛季概要">
       <article className="summary-item">
-        <span>榜首优势</span>
+        <span>车手榜首优势</span>
         <strong>{leader.points - second.points} 分</strong>
       </article>
       <article className="summary-item">
-        <span>总积分</span>
+        <span>车手积分合计</span>
         <strong>{totalPoints} 分</strong>
       </article>
       <article className="summary-item">
