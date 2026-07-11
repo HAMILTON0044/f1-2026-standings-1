@@ -3,11 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      (() => {
+        const storageKey = "f1-2026-standings-theme";
+        let theme = "light";
+
+        try {
+          const savedTheme = window.localStorage.getItem(storageKey);
+
+          if (savedTheme === "light" || savedTheme === "dark") {
+            theme = savedTheme;
+          } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+            theme = "dark";
+          }
+        } catch {
+          theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        }
+
+        document.documentElement.dataset.theme = theme;
+      })();
+    </script>
     <meta
       name="description"
-      content="F1 2026 赛季车手积分榜，展示英国大奖赛后 22 位车手的积分情况。"
+      content="F1 2026 赛季积分中心，展示英国大奖赛后的车手与车队积分汇总。"
     />
-    <title>F1 2026 车手积分榜</title>
+    <title>F1 2026 赛季积分中心</title>
   </head>
   <body>
     <div id="root"></div>
